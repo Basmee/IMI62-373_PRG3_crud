@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:thelast/screens/users.dart';
-import 'package:thelast/screens/home.dart';
 
 class UserInfo extends StatelessWidget {
   const UserInfo({super.key});
@@ -12,14 +11,24 @@ class UserInfo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("User Info"),
+        elevation: 5,
       ),
       body: Container(
         margin: const EdgeInsets.all(10),
         child: ListView(
           children: [
-            ListTile(title: Text("Full Name"), subtitle: Text("${user.fullname}"),),
-            ListTile(title: Text("Email"), subtitle: Text("${user.email}"),),
-            ListTile(title: Text("Gender"), subtitle: Text("${user.gender}"),),
+            ListTile(
+              title: Text("Full Name"),
+              subtitle: Text("${user.fullname}"),
+            ),
+            ListTile(
+              title: Text("Email"),
+              subtitle: Text("${user.email}"),
+            ),
+            ListTile(
+              title: Text("Gender"),
+              subtitle: Text("${user.gender}"),
+            ),
           ],
         ),
       ),

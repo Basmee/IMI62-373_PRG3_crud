@@ -15,11 +15,12 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Users CRUD',
       theme: ThemeData(
-        primarySwatch: Colors.lightBlue),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.cyan),
+          useMaterial3: true),
       initialRoute: '/',
       routes: {
-        '/':(context) => const Home(),
-        '/login':(context) => const Login(),
+        '/': (context) => const Home(),
+        '/login': (context) => const Login(),
       },
     );
   }
